@@ -1,0 +1,38 @@
+
+<!-- saved from url=(0154)https://asia.creativecdn.com/ig-membership?ntk=l6Lbt2sfIIkEkoBYUIUCaQuMKXYQ8K6_C0XsQJ7nhibp5Hyflvclz5h1tjDL3lke9dgLDB-_fzbGlU6PqEHmthJ6kJui4t8kxYhGcIdJd58 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+<script>
+    if (navigator.joinAdInterestGroup) {
+        const addIgScript = document.createElement('script');
+        let src = null;
+        if (navigator.runAdAuction) {
+            if (window.FencedFrameConfig || 'src' in document.createElement('fencedframe')) {
+                src = 'https://asia.creativecdn.com/ig-membership?ntk=-d5S3gcmi7IudyuYPNMjVRrInadxojgI7Yl1fVTF-HLZhspM_-Aasvq_cZil2K3IZVhh9a1aLr2fVGezAR4iU2LOIoWBy1um_HHBhNVlM8I';
+            } else {
+                src = 'https://asia.creativecdn.com/ig-membership?ntk=-d5S3gcmi7IudyuYPNMjVRrInadxojgI7Yl1fVTF-HLZhspM_-Aasvq_cZil2K3IZVhh9a1aLr2fVGezAR4iU0GrfFYErdwQvWNZXRW8SHw';
+            }
+        } else {
+            if (window.FencedFrameConfig || 'src' in document.createElement('fencedframe')) {
+                src = 'https://asia.creativecdn.com/ig-membership?ntk=-d5S3gcmi7IudyuYPNMjVRrInadxojgI7Yl1fVTF-HLZhspM_-Aasvq_cZil2K3IZVhh9a1aLr2fVGezAR4iUwXuSA_VtCGcUj5bUCRf6Yg';
+            } else {
+                src = 'https://asia.creativecdn.com/ig-membership?ntk=-d5S3gcmi7IudyuYPNMjVRrInadxojgI7Yl1fVTF-HLZhspM_-Aasvq_cZil2K3IZVhh9a1aLr2fVGezAR4iU6yidbjrT1K1kVeet9T8-Eo';
+            }
+        }
+
+        if ('cookieDeprecationLabel' in navigator) {
+            navigator.cookieDeprecationLabel.getValue().then((label) => {
+                if (label) {
+                    src += "&lbl=" + label;
+                }
+
+                addIgScript.setAttribute('src', src);
+                document.body.appendChild(addIgScript);
+            });
+        } else {
+            addIgScript.setAttribute('src', src);
+            document.body.appendChild(addIgScript);
+        }
+    }
+</script><script src="./ig-membership"></script>
+
+</body></html>
