@@ -1,0 +1,61 @@
+(function ($, root, undefined) {
+	
+	$(function () {
+
+		$(document).ready(function() {
+            $('#megamenu').click(function() {
+                    $('.menu-dropdown').slideToggle('fast');
+            });
+        });
+
+        document.querySelector( "#nav-toggle" )
+            .addEventListener( "click", function() {
+            this.classList.toggle( "active" );
+        });
+		
+		$('#slickbox').hide();
+			$('.slick-slidetoggle').click(function() {
+			$('#slickbox').slideToggle(500);
+			return false;
+		});
+
+		$('ul.sub-menu').hover(function(){
+		    $('#dark').fadeTo(400, 1);
+		}, function(){
+		    $('#dark').fadeTo(400, 0, function(){
+		        $(this).hide();
+		    });
+		});
+
+		$(function () {
+		  $(document).scroll(function () {
+		    var $nav = $(".header");
+		    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+		  });
+		});
+
+		$('.navbar ul li ul').hide(); //Hide children by default
+
+		$('.navbar ul').children().click(function(){
+			$(this).children('.navbar ul li ul.sub-menu').slideToggle('100');     
+		}).children('.navbar ul li ul.sub-menu').click(function (event) {
+			event.stopPropagation();
+		});
+
+		var $backToTop = $(".backTop");
+	    $backToTop.hide();
+	    $(window).on('scroll', function() {
+	      if ($(this).scrollTop() > 100) {
+	        $backToTop.fadeIn();
+	      } else {
+	        $backToTop.fadeOut();
+	      }
+	    });
+
+	    $backToTop.on('click', function(e) {
+	      $("html, body").animate({scrollTop: 0}, 500);
+	    });
+		
+	});
+	
+})(jQuery, this);
